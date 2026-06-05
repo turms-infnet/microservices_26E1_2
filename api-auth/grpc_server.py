@@ -17,7 +17,7 @@ class GrpcAuthService(auth_pb2_grpc.GrpcAuthServiceServicer):
 
         if result.get("is_valid"):
             return auth_pb2.UserResponse(
-                id=result.get("user_id"),
+                id=result.get("id"),
                 username=result.get("username"),
                 email=result.get("email"),
                 is_valid=True
